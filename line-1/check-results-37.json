@@ -1,0 +1,39 @@
+{
+  "new_tool_tests": 8,
+  "random_grid_cases": 200,
+  "lockcheck_tests": 10,
+  "plancheck_tests": 15,
+  "file_cli_cases": [
+    {
+      "budget": "6",
+      "expected_exit": 0,
+      "observed_exit": 0
+    },
+    {
+      "budget": "5.99999999999999999999",
+      "expected_exit": 2,
+      "observed_exit": 2
+    },
+    {
+      "budget": "NaN",
+      "expected_exit": 1,
+      "observed_exit": 1
+    }
+  ],
+  "generated_plan_passes_both_validator_clis": true,
+  "wall_png_dimensions": [
+    1254,
+    1254
+  ],
+  "preview_jpeg_dimensions": [
+    512,
+    512
+  ],
+  "preview_bytes": 83042,
+  "record_count": 37,
+  "record_hash_matches": true,
+  "goal_unchanged": true,
+  "older_records_unchanged": true,
+  "tracked_changes_within_scope": true,
+  "unmet_visual_requirements": []
+}

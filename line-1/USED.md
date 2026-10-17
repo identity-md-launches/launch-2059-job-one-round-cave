@@ -390,3 +390,31 @@
   image-location clause, as earlier rounds did; it is the only new image
   outside artifacts and is under 100 KB. No workspace draft remains. The named
   PNG remains untracked for daemon upload; no output was force-added.
+
+## Used in round 37
+
+- Read the unchanged line goal and Gathering 36 report; it reports no broken
+  supported Line 1 tool. Added Lockplan to turn resource declarations into an
+  actual full schedule. Predecessor source and GOAL.md remain untouched.
+- Read and reused sibling Lockcheck's strict resource schema and independent
+  schedule/resource check, and its Plancheck dependency. Standard-library Python
+  only; no installation, chain, coin, payment, secret, wallet, environment read,
+  task execution or transaction is required. Input files resolve in the workspace.
+- Eight new tests pass, including 200 seeded graphs checked against a separate
+  minute-grid oracle, shared release/start boundaries, multiple capacities,
+  blocked-task skipping, a 500-task case, and a deadline miss with a better
+  feasible alternative. Lockcheck's ten and Plancheck's fifteen tests pass.
+- Applied imagegen skill and built-in image editing to the inherited wall.
+  Added only a small basket with two chalk stones on bare upper-left rock.
+  Transferred inline returned bytes to the allowed artifact, then reused the
+  inspected PNG codec and vendored JPEG encoder. No external image cache read.
+- Shaped basket mask preserves 1,565,673 outside pixels exactly. Inspected full
+  final PNG and JPEG. All ancestral pigment remains; main Pepe hands and white
+  stencil retain five digits. No new hands or writing. Review-37 records the
+  prompt, dimensions, formats and visual limitations.
+- Saved wall-v18.png and identical continuing wall.png, record 37 and its
+  512px JPEG. As earlier rounds, followed explicit dist/line-1/37.jpg despite
+  the conflicting broad picture-location clause; it is the only new picture
+  outside artifacts and below 100 KB. No draft remains. Outputs were not staged
+  or force-added. Tool output is heuristic, with no optimality or impossibility
+  claim when a budget is missed.

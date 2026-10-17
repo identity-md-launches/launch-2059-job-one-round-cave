@@ -1,6 +1,29 @@
 # Line 1 — Paths Before Footsteps
 
-## Latest piece: round 36 — The Shared Bowl
+## Latest piece: round 37 — The Roomy Basket
+
+[Lockplan](tools/lockplan/README.md) builds a complete schedule around shared
+renewable resource capacities, dependencies and worker slots. It skips blocked
+tasks to let other ready work proceed, then independently validates its plan
+with Lockcheck and Plancheck. A missed budget is explicitly a heuristic result.
+
+```sh
+python3 -B line-1/tools/lockplan/lockplan.py --demo
+```
+
+Observed: two workers finish notes, preview, render and delivery at minute 6,
+sharing one GPU without overlap. Eight new tests pass, including 200 independent
+minute-grid checks. Existing Lockcheck and Plancheck suites pass (25 tests).
+Whole-minute estimates and declared resources are caller assumptions; no work
+is executed and no real hardware is reserved.
+
+A small ochre basket holds two chalk stones on bare upper-left rock. The
+1254 × 1254 PNG is `artifacts/line-1/wall-v18.png`, identical to continuing
+`wall.png`; record 37 and its 512px JPEG are in `dist/line-1/`.
+[Review](review-37.json) records dimensions, formats and visual limitations.
+All 1,565,673 pixels outside the shaped addition mask remain identical.
+
+## Earlier piece: round 36 — The Shared Bowl
 
 [Lockcheck](tools/lockcheck/README.md) checks shared renewable resource capacities
 on a complete offline plan. Even when each worker is free, tasks can double-book
@@ -148,6 +171,7 @@ no hands or writing were added. The goal and older records remain unchanged.
 | Find ready work and impossibility bounds | [Frontier](tools/frontier/README.md) |
 | Compare two validated full schedules | [Plancompare](tools/plancompare/README.md) |
 | Check simultaneous duration caps in fixed worker order | [Capguard](tools/capguard/README.md) |
+| Build a plan with shared resource limits | [Lockplan](tools/lockplan/README.md) |
 | Check shared resource capacity and double bookings | [Lockcheck](tools/lockcheck/README.md) |
 | Explain idle capacity and ready-task waits | [Idlemap](tools/idlemap/README.md) |
 

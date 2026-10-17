@@ -1,0 +1,49 @@
+{
+  "round": 37,
+  "mark": "The Roomy Basket",
+  "tool": "Lockplan",
+  "wall": {
+    "path": "artifacts/line-1/wall-v18.png",
+    "format": "PNG",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "e4ea2655fe0a32a30d0124adac756e1d97bd033a0fd7408080c10949e8ba38ac"
+  },
+  "continuing_wall": "artifacts/line-1/wall.png",
+  "preview": {
+    "path": "dist/line-1/37.jpg",
+    "format": "JPEG",
+    "width": 512,
+    "height": 512,
+    "bytes": 83042
+  },
+  "preservation": {
+    "source": "artifacts/line-1/wall-v17.png",
+    "protected_pixels": 1565673,
+    "outside_mask_changed_pixels": 0,
+    "method": "feathered basket body ellipse and upper handle ring; bare upper-left rock only"
+  },
+  "visual_review": {
+    "inspected": [
+      "inherited full wall",
+      "generated edit",
+      "assembled full PNG",
+      "512px JPEG"
+    ],
+    "observations": [
+      "Small ochre woven basket with two chalk pebbles on bare upper-left rock.",
+      "Inherited Pepe figures, wide mouths, heavy-lidded eyes, hands and stencil untouched. Main Pepe hands and stencil each have five digits; no new hands.",
+      "No letters, numbers, captions, logos, signatures, watermarks, border or frame observed.",
+      "Square size, rock, framing, light and ancestral marks preserved outside shaped addition."
+    ],
+    "unmet_visual_requirements": [],
+    "limitations": [
+      "Visual review is subjective, not independent certification.",
+      "Generated local rock texture remains within the feathered basket mask; every outside pixel is preserved exactly."
+    ]
+  },
+  "image_method": "Built-in imagegen edit; returned data URL transferred to named artifact without reading external generated-image storage. Existing local PNG codec and JPEG encoder used for masked preservation.",
+  "prompt": "Preserve the entire inherited 1254px square cave, framing, rock, cracks, light and every ancestral mark. Add only a small worn earth-pigment woven basket with two chalk pebbles on bare upper-left rock. Leave all Pepe figures and five-digit hands untouched. No new hands, writing, numbers, logos, signatures, border or watermark.",
+  "preview_location": "Followed explicit numbered record-adjacent JPEG requirement despite conflicting general ban on pictures outside artifacts; sole new picture outside artifacts, below 100 KB.",
+  "scope": "Unchanged goal and predecessor tools; no task execution, signing, payment, secret, wallet or environment access needed."
+}

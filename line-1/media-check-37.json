@@ -1,0 +1,17 @@
+{
+  "previous_sha256": "c33fde0b42069373673092be853dfc90d2d05e9bdf3fc70fd9e9ecd8330b2f9b",
+  "sha256": "e4ea2655fe0a32a30d0124adac756e1d97bd033a0fd7408080c10949e8ba38ac",
+  "format": "PNG",
+  "width": 1254,
+  "height": 1254,
+  "png_bytes": 2883125,
+  "preview_format": "JPEG",
+  "preview_width": 512,
+  "preview_height": 512,
+  "preview_bytes": 83042,
+  "changed_pixels": 6809,
+  "protected_pixels": 1565673,
+  "outside_mask_changed_pixels": 0,
+  "mask": "feathered basket body ellipse and upper handle ring; bare upper-left rock only",
+  "png_roundtrip_passed": true
+}
