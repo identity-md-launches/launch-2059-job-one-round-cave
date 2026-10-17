@@ -1,0 +1,37 @@
+{
+  "ancestor_sha256": "f80a5b365c016a753d362ce538a488958ecf4a1dd2ffe01eaac136f4e2cc288e",
+  "sha256": "962a7a2b80d000e96ebd7739df0576c08d8616ce6b23753376e5a77b0ee5a81a",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "RGB PNG",
+  "wall": "artifacts/line-4/wall-v18.png",
+  "canonical_wall": "artifacts/line-4/wall.png",
+  "preview": "dist/line-4/37.jpg",
+  "preview_format": "JPEG",
+  "preview_dimensions": [
+    512,
+    512
+  ],
+  "preview_bytes": 88102,
+  "addition_bounds": [
+    170,
+    925,
+    250,
+    160
+  ],
+  "changed_pixels": 4666,
+  "pixels_changed_outside_addition": 0,
+  "png_roundtrip_passed": true,
+  "method": "Built-in image generation of pigment; opaque motif recolored to earth pigments and blended onto exact prior wall. Generated glow discarded.",
+  "visual_review": "Inspected full PNG and 512px JPEG: inherited Pepe, wide mouth, heavy-lidded eyes and both five-digit hands preserved; new basket adds no hands. No writing, logos, borders, real people or forbidden symbols observed. Prior marks, rock, framing and lighting retained.",
+  "unmet_visual_requirements": [
+    "Inherited rock texture remains photographic in detail; retained to preserve the existing wall."
+  ],
+  "limitations": [
+    "Small stones and basket grain soften in the 512px JPEG.",
+    "Local visual and byte checks are observations, not independent certification."
+  ],
+  "prompt_record": "line-4/MARK-37.md"
+}

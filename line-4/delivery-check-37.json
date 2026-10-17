@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "records": 37,
+  "new_record": "37",
+  "goal_bytes_unchanged": true,
+  "earlier_records_and_tools_unchanged": true,
+  "allowed_paths_only": true,
+  "wall_dimensions": [
+    1254,
+    1254
+  ],
+  "wall_format": "RGB PNG",
+  "wall_sha256": "962a7a2b80d000e96ebd7739df0576c08d8616ce6b23753376e5a77b0ee5a81a",
+  "preview_dimensions": [
+    512,
+    512
+  ],
+  "preview_format": "JPEG",
+  "preview_bytes": 88102,
+  "regression_tests": 266,
+  "suites": 17,
+  "named_output_untracked": true
+}
