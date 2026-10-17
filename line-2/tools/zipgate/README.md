@@ -103,3 +103,8 @@ concurrent path mutation; SafeZip's staging, atomic publication and race
 limitations still apply. The gate makes deliberately stricter format choices;
 useful valid archives may be refused. It does not inspect nested archives or
 establish that extracted content is safe to execute. No coin is needed.
+
+Round 37 adds `preflight.archive_bytes` to `process` reports: the exact full
+ZIP length of the captured, digest-bound snapshot, including final comments.
+It is not read from a later pathname stat. Standalone `directory_gate` counts
+remain unchanged. ZipMerge uses this to enforce a shared whole-input budget.

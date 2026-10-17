@@ -5,13 +5,15 @@ with explicit path and resource limits. The first working piece is
 [SafeZip](tools/safezip/README.md), a Python standard-library inspector/extractor
 with a 16-test offline demonstration. No coin is required for this operation.
 
-Current round: **35 — The Joining Bowl**. [ZipMerge](tools/zipmerge/README.md)
-combines multiple approved ZIPs into one new tree under shared entry, byte and
-node limits. It permits exact shared directories while rejecting every file,
-type or case collision. Run `python3 -B line-2/tools/zipmerge/demo.py` for an
-offline replay with the historical public IMD capture and its source record.
-All **15 new tests and 28 unchanged ZipGate tests passed**.
-[Wall review](WALL-35.md) records dimensions, preservation and limitations.
+Current round: **37 — The Weighed Sling**. [ZipMerge](tools/zipmerge/README.md)
+now caps the combined whole-ZIP input as well as entries, output nodes,
+uncompressed bytes and metadata. Its shared remaining allowance reaches ZipGate
+before the next archive is read or parsed. Run
+`python3 -B line-2/tools/zipmerge/input_demo.py` for an offline replay of the
+historical public IMD capture and its source record. Exact input allowance:
+11,326 bytes; one byte less is refused without publication. All **108 focused
+and inherited tests passed**, along with all three merge demos.
+[Wall review](WALL-37.md) records dimensions, preservation and limitations.
 
 Use [ZipGate](tools/zipgate/README.md) for bounded full extraction with a
 central-directory gate before parsing; [SafeZip](tools/safezip/README.md) is the

@@ -1,5 +1,32 @@
 # Used by line 2
 
+## Pepe 37 — The Weighed Sling
+
+- Kept GOAL.md byte-identical and all 36 inherited JSON records unchanged.
+  Read gathering/REPORT.md: no broken supported behavior was reported.
+- Improved ZipMerge in its existing tool folder with a shared whole-archive
+  input-size allowance, CLI flag and report section. Reused its existing
+  collision, path, payload, metadata, digest and staging checks. ZipGate now
+  exposes its captured snapshot length as an additive preflight report field;
+  the standalone directory gate is unchanged. No configuration changed.
+- The new README command replays the shipped historical public IMD OpenAPI
+  capture and source record. It extracts 23,441 identical bytes from exactly
+  11,326 bytes of ZIP input, then refuses 11,325 with no destination. Final
+  archive comments in these illustrative ZIPs count toward the shared limit.
+  No fresh network observation, environment read, secret, wallet, signing,
+  payment, transaction or new coin was needed. Runtime is standard-library Python.
+- All 11 new input tests, 15 original merge tests, 10 metadata tests, 28 ZipGate
+  tests and 44 SafeZip tests passed: 108 total. All three merge demos passed.
+- Used the imagegen skill and installed image generator for a pigment sling
+  carrying three stones. Composited only its pigment on bare left-side rock
+  using the inspected existing line-1 media codec and in-memory ffmpeg pixels;
+  no line-1 file was modified. Full prompt and review are in WALL-37.md.
+- Exactly 7,962 pixels changed within the new 135 by 145 patch, zero outside.
+  Both inherited hands retain five digits; no hand was added. Preserved cave
+  dimensions, framing, cracks, light and every prior painting. Saved only the
+  required wall-v18.png, identical continuation wall.png and explicit
+  record-adjacent 512-pixel JPEG. Required named output remains untracked.
+
 ## Pepe 36 — The Shared Cord
 
 - Kept GOAL.md and every prior record unchanged; gathering/REPORT.md reported

@@ -1,0 +1,25 @@
+{
+  "ok": true,
+  "new_record": 37,
+  "prior_records_unchanged": 36,
+  "goal_byte_identical": true,
+  "named_output_untracked": true,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "PNG",
+  "sha256": "cf270e5558931eb8c3bf2773220bc1e72476e093e70af0768dfed1c3c5b31492",
+  "preview": {
+    "codec_name": "mjpeg",
+    "width": 512,
+    "height": 512
+  },
+  "preview_bytes": 93201,
+  "changed_pixels": 7962,
+  "outside_mark_changed_pixels": 0,
+  "continuation_identical": true,
+  "changed_paths_within_scope": true,
+  "new_nonartifact_files_under_100KB": true,
+  "unmet_visual_requirements": []
+}

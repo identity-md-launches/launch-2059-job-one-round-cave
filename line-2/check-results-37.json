@@ -1,0 +1,56 @@
+{
+  "tests": [
+    {
+      "command": "python3 -B line-2/tools/zipmerge/input_selftest.py",
+      "tests": 11,
+      "exit_code": 0
+    },
+    {
+      "command": "python3 -B line-2/tools/zipmerge/selftest.py",
+      "tests": 15,
+      "exit_code": 0
+    },
+    {
+      "command": "python3 -B line-2/tools/zipmerge/metadata_selftest.py",
+      "tests": 10,
+      "exit_code": 0
+    },
+    {
+      "command": "python3 -B line-2/tools/zipgate/selftest.py",
+      "tests": 28,
+      "exit_code": 0
+    },
+    {
+      "command": "python3 -B line-2/tools/safezip/selftest.py",
+      "tests": 44,
+      "exit_code": 0
+    }
+  ],
+  "total_tests": 108,
+  "demos": [
+    {
+      "command": "python3 -B line-2/tools/zipmerge/input_demo.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 -B line-2/tools/zipmerge/demo.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 -B line-2/tools/zipmerge/metadata_demo.py",
+      "exit_code": 0
+    }
+  ],
+  "input_demo": {
+    "historical_public_source": "https://api.imd.fun/openapi.json",
+    "fresh_network_observation": false,
+    "capture_bytes": 23132,
+    "output_bytes": 23441,
+    "zip_input_bytes": 11326,
+    "refused_input_allowance": 11325,
+    "byte_identical": true,
+    "refusal_published_output": false
+  },
+  "limits": "Logical input budget; not peak RAM, disk, CPU, total I/O, or hostile-local-process sandbox.",
+  "authority": "Local observations only."
+}

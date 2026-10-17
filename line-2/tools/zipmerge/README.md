@@ -4,20 +4,21 @@ Combine several independently approved ZIP archives into one new workspace
 directory. ZipMerge checks every archive and payload through the shipped
 ZipGate/SafeZip tools, refuses a repeated file, file/directory conflict or
 case-colliding path across archives, and enforces shared entry, output node and
-uncompressed byte limits. Identical shared parent directories are allowed. It
+uncompressed byte limits and a shared whole-archive input budget. Identical shared parent directories are allowed. It
 publishes the joined tree only after all checks and extraction passes succeed.
 Python 3.9+ standard library only; no installation, account or network needed.
 
 Run this one command from the repository root to see it work:
 
 ```sh
-python3 -B line-2/tools/zipmerge/metadata_demo.py
+python3 -B line-2/tools/zipmerge/input_demo.py
 ```
 
 Tried here: two illustrative ZIP packages contain the shipped historical public
 IMD OpenAPI capture (23,132 bytes) and its source record. ZipMerge joined their
 shared `docs/imd` directory, reproduced both files byte for byte, and refused a
-shared central-directory budget one byte too small for both. The demo creates and removes disposable
+shared whole-archive input budget one byte too small for both (11,325 bytes).
+The exact 11,326-byte allowance succeeds, including archive comments and headers. The demo creates and removes disposable
 data only under `test/scratch/`; it makes no fresh network observation. The
 capture and provenance are in `../safezip/`.
 
@@ -62,7 +63,8 @@ python3 -B line-2/tools/zipmerge/zipmerge.py extract combined --archive first.zi
 `combined` must not exist; its parent must already exist. All input and output
 paths must be inside the current workspace with no existing symlink component.
 Plan mode creates nothing. Python callers use `process(specs, output=None,
-merge_nodes=..., merge_bytes=..., merge_directory_bytes=..., seconds=...)`, where each spec is exactly
+merge_nodes=..., merge_bytes=..., merge_directory_bytes=...,
+merge_archive_bytes=..., seconds=...)`, where each spec is exactly
 `{'archive': path, 'sha256': reviewed_digest}`. Omitting `output` plans only.
 
 By default, at most 32 archives, 1,000 combined entries, 32,000 distinct output
@@ -104,3 +106,46 @@ exhausted allowance, invalid options before input I/O, retained per-archive
 bounds, CLI reporting and two large-comment archives that each fit individually
 but exceed the shared default. A parser spy confirms the later refusal occurs
 before SafeZip parsing. These are local observations, not certification.
+
+## Shared whole-archive input budget (round 37)
+
+`merge_archive_bytes` / `--merge-archive-bytes` defaults to **64 MiB for the
+whole merge**. Each archive receives the smaller of its individual `archive_bytes`
+cap and the remaining shared allowance, before its first read or ZIP parsing.
+The count includes every byte of each approved ZIP: local headers, compressed
+or stored payloads, central directory, end record and final archive comment.
+Repeated inputs count each time; even an empty ZIP costs 22 bytes. If fewer
+than 22 bytes remain, the next archive is refused without opening it.
+
+ZipGate's process report now adds `preflight.archive_bytes`, measured from its
+bounded captured snapshot rather than a later pathname stat. ZipMerge sums
+those counts into `input.archive_bytes` and reports the configured cap as
+`input.archive_byte_limit`. Existing totals and metadata fields retain their
+meaning. The additional field does not change the standalone `directory_gate`
+return value. Keep the updated shipped ZipGate and ZipMerge folders together.
+
+This tightens the default for combined archives larger than 64 MiB, even if
+individually allowed; raise the shared cap explicitly for reviewed larger input.
+It is a logical input-size budget, **not** a cap on total bytes read, peak RAM,
+disk use or CPU time. Gate inspection and digest-bound extraction reread inputs.
+All original payload, path, metadata, digest, collision and staging checks still
+apply. Filesystem checks assume a cooperative workspace.
+
+Tried locally: `input_demo.py` extracted the saved public IMD API capture and
+source record byte-identically, with 11,326 bytes of ZIP input and 23,441 bytes
+of output. Its illustrative final ZIP comments are included in the input cap
+but not the 125-byte shared central directory. A cap of 11,325 refused before
+parsing the second archive and left no output. This is offline historical public
+data, not a fresh API observation. No secret, wallet, coin or network is needed.
+
+```sh
+python3 -B line-2/tools/zipmerge/input_selftest.py
+```
+
+All 11 new input-budget tests passed, as did the 15 original merge tests,
+10 metadata tests, 28 ZipGate tests and 44 SafeZip tests: **108 tests total**.
+The three merge demos passed. New tests exercise exact and one-under boundaries,
+parser refusal, exhausted allowance without opening later input, empty/repeated
+archives, retained individual limits, invalid options before I/O, snapshot counts
+after pathname replacement, extraction digest binding and CLI report/refusal.
+These are local check results, not independent certification.
