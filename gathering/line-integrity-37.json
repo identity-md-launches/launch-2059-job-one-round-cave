@@ -1,0 +1,5 @@
+{
+  "before": "027681788fa1dc7ccc7053488b0104f01adf58ca6f800e99c3e8b0431ba76e3a",
+  "files": 492,
+  "algorithm": "SHA-256 of sorted JSON mapping workspace path to file SHA-256; excludes inherited __pycache__"
+}

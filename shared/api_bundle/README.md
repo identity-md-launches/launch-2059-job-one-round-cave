@@ -365,3 +365,66 @@ An approved-ZIP comparison against the bundled historical capture with
 `statuses=True` found five common operations, 2,500 status visits and no findings.
 Only the public-description GET supplied by gathering was used; the shared
 comparison and all demonstrations were offline.
+
+
+## Map-value schemas (gathering 37)
+
+Use `--maps` (Python: `maps=True`) to inspect the schemas governing
+`additionalProperties` values. This includes DispatchCheck and every earlier
+analyzer; earlier flags keep their previous scope. The MapCheck source is
+copied from line 4 with only sibling import and demo-capture path adaptations.
+Line 2's updated ZipGate snapshot also records whole-archive captured bytes
+when its `process` API is used. `SOURCES.json` identifies all 19 source snapshots.
+
+```sh
+python3 -B shared/api_bundle/map_demo.py
+python3 -B shared/api_bundle/map_selftest.py
+```
+
+The demo wraps a saved public IMD API operation in two SHA-approved ZIPs. Its
+hypothetical response map keeps the same local value reference while the
+referenced integer enum grows from `[1, 2]` to `[1, 2, 3]`. Dispatch mode leaves
+a component-change review; map mode finds one potential response break at
+`additionalProperties/enum` and retains that review. Unchanged input is clean.
+This is illustrative schema data, not an observed service change. No archive
+member is extracted or executed, no external reference is fetched, and no
+API operation is invoked. Temporary demonstration archives live in
+`test/scratch/` and are removed automatically.
+
+For received archives:
+
+```sh
+python3 -B shared/api_bundle/api_bundle.py old.zip new.zip --member openapi.json --maps
+```
+
+Add `--old-sha256` and `--new-sha256` with the digests you reviewed to bind the
+comparison to approved archive bytes. Approval, directory budgets, path checks,
+complete payload/CRC inspection and all earlier limits precede map analysis.
+When flags are combined, `--maps` selects the most inclusive analyzer. Exits
+remain 0 (no detected break within the subset), 1 (potential break), 2 (refusal),
+and 3 (unresolved review). A review is not approval.
+
+Map mode compares request narrowing and response widening, true/omitted/closed
+policies, and independently resolved local value targets. It traverses nested
+maps, inherited schema sites, explicit discriminator targets and remapped
+response headers. At most 1,024 nontrivial map pairs are accepted; exhaustion
+refuses the comparison. Findings concern a potentially used map-value region,
+not whole-schema implication. Named-key migrations, `patternProperties`,
+composition, reachability and live server behavior remain unresolved. All
+inherited review findings remain. Descriptions and content hashes establish
+neither publisher trust nor runtime compatibility.
+
+Observed in gathering 37: all 93 integration tests and seven demos passed both
+in place and in a standalone copy containing only this folder. The eight new
+integration tests cover unchanged captures, unchanged references with changed
+targets, request/response policy direction, status-remapped headers, retained
+reviews, all CLI exits and flag precedence, malformed/remote values, budget
+refusals, CRC failure on an unselected member before analysis, and ZipGate's
+whole-snapshot count including final comments. No installation is needed.
+
+A read-only public-description GET on 2026-10-17 with User-Agent
+`Pepeolithic-Gathering37/1.0` returned 23,132 bytes, SHA-256
+`be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a`.
+An approved-ZIP comparison against the historical capture in map mode found
+five common operations and no findings. This checks the published description;
+no described operation or transaction was sent.

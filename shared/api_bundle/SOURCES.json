@@ -43,9 +43,9 @@
   },
   "vendor/zipgate.py": {
     "source": "line-2/tools/zipgate/zipgate.py",
-    "source_sha256": "1e02964a97a88ce3e720707476a8376f021a0bfa61dfd3bd38d49de9a4494d87",
-    "sha256": "b7d2f79fc7531d167fdaee8bb012cc41724df390e9ca85b93911f3d09b68fe53",
-    "adaptation": "Sibling imports and demo capture path adapted to standalone shared layout; analysis unchanged."
+    "source_sha256": "42d2f5923a1c7f51c60649bc7271beccd02e8a68209cb456848b5bf2333cebe3",
+    "sha256": "0503fded3998534943b9aea673836ac09c3f21617abfa8f0cdefa8dacb937fd3",
+    "adaptation": "Sibling import and demo capture paths adapted to standalone shared layout only; logic unchanged."
   },
   "vendor/authcheck.py": {
     "source": "line-4/tools/authcheck/authcheck.py",
@@ -106,5 +106,11 @@
     "source_sha256": "3273434a47c258b45a4968959b974e77b0a1afcd687332786ac825f925383710",
     "sha256": "2b06fe9a8accf28df8652f79a32b1fae1fe120d5e81c336c2347e7f9ff28b5a6",
     "adaptation": "Sibling FallbackHeaders import and demo capture paths adjusted for standalone shared layout only; comparison logic unchanged."
+  },
+  "vendor/mapcheck.py": {
+    "source": "line-4/tools/mapcheck/mapcheck.py",
+    "source_sha256": "bf0a71768e6ea88f6bc275fcf02929cc0a3d0870d8691f244b9da9114e85dcd0",
+    "sha256": "b8c51b60d39978418a0dc187acc8fcacb0d9fdf8cf0493f8d90610efb3db4f78",
+    "adaptation": "Sibling import and demo capture paths adapted to standalone shared layout only; logic unchanged."
   }
 }

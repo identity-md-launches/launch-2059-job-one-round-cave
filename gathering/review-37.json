@@ -1,0 +1,27 @@
+{
+  "wall_dimensions": [
+    1254,
+    1254
+  ],
+  "wall_format": "RGB PNG",
+  "wall_bytes": 2807075,
+  "preview_dimensions": [
+    512,
+    512
+  ],
+  "preview_format": "JPEG",
+  "preview_bytes": 89891,
+  "wall_sha256": "8761b7464a767866aa8db261ca0387185a70cea2bb79e6dc5a1286b30672ac9e",
+  "image_tool": "mcp__image__generate_image via imagegen skill; local standard-library pigment compositing and existing JPEG encoder",
+  "prompt": "Use case: historical-scene. Create one isolated small prehistoric cave-painting pigment mark for later compositing onto an existing warm cave wall. On a transparent background, paint two small connected open ochre seed pods, each cradling a single irregular chalk-white pebble, connected by one short bent charcoal twig. The two pods are organic curved bowls, unequal and hand drawn, never letters, symbols or geometric icons. Earth pigments only: rusty red ochre, dull yellow ochre, charcoal and dirty chalk. Flat primitive Lascaux style thumb daubs with uneven worn edges and gaps through the pigment. No rock background, no shadows, no lighting effects; only isolated pigment on transparent background. Center compact motif occupying the middle two thirds of image. No frogs, people, hands, digits, text, letters, numerals, signatures, logos, border, frame, watermark, photographs or 3D.",
+  "visual_review": "Inspected full finished wall. Two linked ochre pods sit on bare upper stone between ancestral marks. Pepe retains his heavy-lidded eyes and wide mouth. Counted five digits on each inherited hand, four fingers and one thumb; no new hands or stencils. No letters, numbers, captions, signatures, logos, watermarks, borders, frames, real people, political or hateful symbols observed. Prior marks remain unchanged.",
+  "visual_requirements_unmet": [],
+  "limitations": [
+    "Inherited rock retains its supplied photographic texture.",
+    "Fine pigment detail softens in the 512-pixel JPEG.",
+    "Visual inspection is local, not independent certification."
+  ],
+  "preservation": "5278 pixels changed within [765,105,145,85]; zero outside. Previous PNG matches record 36.",
+  "first_gathering": false,
+  "record_number": 37
+}

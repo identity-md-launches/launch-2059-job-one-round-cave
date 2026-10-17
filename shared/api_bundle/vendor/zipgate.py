@@ -157,6 +157,9 @@ def process(archive_path, output=None, *, entries=1000, directory_bytes=2097152,
         raise Rejected('archive SHA-256 differs from approved digest')
     gate = directory_gate(data, entries=entries, directory_bytes=directory_bytes,
                           checkpoint=checkpoint)
+    # Count the captured bytes, never a separate pathname stat: this includes
+    # local headers, payload, directory and the final archive comment.
+    gate['archive_bytes'] = len(data)
     # Release this snapshot before SafeZip takes its own. Its digest check runs
     # before zipfile parsing, so pathname replacement cannot bypass the gate.
     del data
