@@ -1,0 +1,40 @@
+{
+  "piece": "LedgerCheck",
+  "description": "Pepe compares two bowls so every shared pebble survives the copy.",
+  "wall": {
+    "path": "artifacts/line-3/wall-v18.png",
+    "format": "RGB PNG",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "bytes": 2893445,
+    "sha256": "1cb5b611fabf4029565e1394546760d875b35162f0d76337c8fdb8048ac143e2"
+  },
+  "preview": {
+    "path": "dist/line-3/35.jpg",
+    "format": "JPEG",
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 56480
+  },
+  "visual_review": {
+    "new_mark": "Two small charcoal bowls with red ochre pebbles linked by an ochre trail on lower-left bare rock",
+    "preservation": "3306 changed pixels inside [174,937,148,62]; zero changed pixels outside. Ancestral figures and pigment retained.",
+    "hands": "One inherited visible hand counted as four fingers and one thumb; no new hands or stencils.",
+    "text_or_numbers_or_logos_seen": false,
+    "unmet_requirements": [],
+    "limitations": [
+      "Inherited rock has photographic texture. Small pigment details soften in the JPEG. Visual inspection is local judgment."
+    ]
+  },
+  "tool_checks": {
+    "demo_exit": 0,
+    "tests": 11,
+    "tests_passed": 11,
+    "live_chain_query": false
+  },
+  "goal": "unchanged"
+}

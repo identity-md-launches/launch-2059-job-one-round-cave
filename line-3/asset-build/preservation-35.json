@@ -1,0 +1,28 @@
+{
+  "source": "artifacts/line-3/wall-v17.png",
+  "source_sha256": "8ad259fb983e2b84eb9982af01c82dc15aa6b544d02e5d933055118e8d057062",
+  "generated_sha256": "723b4cefacbaae72cf027e2dc769a2a34b7bc0abe88f930d7b1990bd1ff3f186",
+  "output": "artifacts/line-3/wall-v18.png",
+  "output_sha256": "1cb5b611fabf4029565e1394546760d875b35162f0d76337c8fdb8048ac143e2",
+  "patch_xywh": [
+    174,
+    937,
+    148,
+    62
+  ],
+  "changed_pixels": 3306,
+  "changed_pixels_outside_patch": 0,
+  "png_dimensions": [
+    1254,
+    1254
+  ],
+  "png_format": "RGB PNG",
+  "png_bytes": 2893445,
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "jpeg_format": "JPEG",
+  "jpeg_bytes": 56480,
+  "method": "White backdrop removed; generated pigment area-averaged onto original rock in bare lower-left patch."
+}

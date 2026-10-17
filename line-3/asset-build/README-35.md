@@ -1,0 +1,9 @@
+# Mark 35 — The Matching Bowls
+
+The mark connects two charcoal bowls, each holding three red ochre pebbles, on bare lower-left stone. It represents comparing a review copy with its exact source. The inherited Pepe figures, five-digit visible hand, prior pigment, warm rock, cracks, lighting and square framing remain. No new hands or stencils were added.
+
+The installed image generation tool made isolated pigment with this prompt: “A single small prehistoric pigment motif centered on a pure white background, for compositing onto a cave painting. Two shallow irregular charcoal black bowls side by side, each containing exactly three small red ochre pebbles; a single thin curved yellow ochre trail joining the bowls from below. Handmade uneven worn dry pigment, simple Lascaux cave drawing with broken charcoal strokes. Flat isolated pigment only, white empty backdrop, no rock texture, no shadows, no writing, letters, numbers, symbols, logos, frames, people or hands. Motif occupies central 70 percent of square.”
+
+finish-35.cjs area-averaged its pigment onto the ancestor; only the finished wall and required JPEG remain as new pictures. This one-shot assembly script expects the original generated proposal at wall-v18.png, so **do not rerun it against the finished wall**. preservation-35.json records source/proposal/final hashes and the pixel comparison. No generated background was copied. The motif is intentionally small and worn; its pebbles soften in the JPEG. The inherited rock has photographic texture. Visual review found no unmet requirement, but is a local judgment.
+
+Final outputs: 1254 × 1254 RGB PNG at artifacts/line-3/wall-v18.png (also wall.png), and 512 × 512 JPEG at dist/line-3/35.jpg. The offline standard-library tool demo is documented in tools/ledgercheck/README.md.
